@@ -5,10 +5,15 @@ import com.company.Pearson;
 import java.util.Objects;
 
 public class Dog {
-    private String name;
-    private static int age;
-    private static int weight;
 
+    private String name;
+    private  int age;
+    private int weight;
+    public Dog(String name,int age, int weight){
+        this.name=name;
+        this.age=age;
+        this.weight=weight;
+    }
 
     public String getName() {
         return name;
@@ -19,7 +24,7 @@ public class Dog {
 
     }
 
-    public static int getWeight() { //геттер
+    public  int getWeight() { //геттер
         return weight;
 
     }
@@ -37,34 +42,17 @@ public class Dog {
     }
 
 
-/*
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        Dog dog1 = (Dog) o;
 
 
-        if (getWeight() != Dog.getWeight()) {
-            return false;
-        }
-        return false;
+
+   public boolean equals(Dog dog){
+       return this.weight>dog.weight&&this.age>dog.age;
 
 
-    }
+   }
 
- */
-    public boolean equals(Object o) {
 
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Pearson pearson = (Pearson) o;
-        return age == Dog.age &&
-                Objects.equals(name, Dog.weight);
-    }
+//если вес равен весу и возвраст равен возрасту вывести тру
+    //else false
 
 }
