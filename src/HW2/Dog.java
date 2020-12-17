@@ -46,7 +46,7 @@ public class Dog {
 
 
    public boolean equals(Dog dog){
-       return this.weight>dog.weight&&this.age>dog.age;
+       return this.weight==dog.weight&&this.age==dog.age;
 
 
    }
